@@ -17,23 +17,17 @@
                     </thead>
 
                     <tbody>
-                        @foreach ($classroom as $item)
+                        @foreach ($classrooms as $item)
                             <tr class="border-b hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-600">
-
                                 <td class="whitespace-nowrap px-4 py-3 font-medium text-gray-900 dark:text-white">
                                     {{ $loop->iteration }}
                                 </td>
-
                                 <td class="whitespace-nowrap px-4 py-3 font-semibold text-gray-900 dark:text-white">
                                     {{ $item->name }}
                                 </td>
-
                                 <td class="px-4 py-3">
-                                    <span class="rounded bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-300">
-                                        {{ $item->major }}
-                                    </span>
+                                    {{ $item->major }}
                                 </td>
-
                             </tr>
                         @endforeach
                     </tbody>
