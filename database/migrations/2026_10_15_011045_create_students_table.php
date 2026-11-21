@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('nis');
+            $table->integer('nis');
             $table->foreignId('classroom_id')->constrained(
-                    table: 'classrooms', indexName:'students_classroom_id'
-            );
-            $table->string('address');
+                table: 'classrooms', indexName: 'students_classroom_id');
+            $table->text('address');
             $table->timestamps();
+
         });
     }
 

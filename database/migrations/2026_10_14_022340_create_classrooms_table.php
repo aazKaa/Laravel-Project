@@ -15,11 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('major');
-            $table->string('classrooms');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      */
