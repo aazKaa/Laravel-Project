@@ -1,7 +1,10 @@
 <x-admin.layout>
-    <h1 style="color: rgb(4, 4, 4); font-size:40px">{{ $title }}</h1>
     <section class="bg-gray-50 dark:bg-gray-900 p-3 sm:p-5">
         <div class="mx-auto max-w-screen-xl px-4 lg:px-12">
+
+            <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-5">
+                {{ $title }}
+            </h1>
 
             @if (session('success'))
                 <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
@@ -44,6 +47,5 @@
             </div>
         </div>
     </section>
-
     @include('admin.teacher.create')
 </x-admin.layout>
